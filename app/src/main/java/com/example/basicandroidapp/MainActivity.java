@@ -13,13 +13,14 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
     private Button btnLearnViews;
     private Button btnWelcomePushNotification;
+    private Button btnApiResponse;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
-        Log.d("BASE_URL",BuildConfig.BASE_URL);
+        Log.d("BASE_URL", BuildConfig.BASE_URL);
         setListeners();
     }
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void initViews() {
         btnLearnViews = findViewById(R.id.btn_learn_views);
+        btnApiResponse = findViewById(R.id.btn_api_response_eg);
         btnWelcomePushNotification = findViewById(R.id.btn_getwelcome_pushnotification);
     }
 
@@ -45,6 +47,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent nextActivityIntent = new Intent(MainActivity.this, NextActivity.class);
                 startActivity(nextActivityIntent);
+            }
+        });
+
+        /*
+         * Setting the Click Action for getting API Response
+         */
+        btnApiResponse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent apiCallActivityIntent = new Intent(MainActivity.this, APICallActivity.class);
+                startActivity(apiCallActivityIntent);
             }
         });
 

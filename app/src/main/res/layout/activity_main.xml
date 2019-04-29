@@ -26,7 +26,7 @@
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="153dp"
             android:layout_marginStart="35dp"
             android:layout_marginLeft="35dp"
             android:layout_marginEnd="35dp"
@@ -61,6 +61,20 @@
             android:background="@color/blue"
             android:padding="25dp"
             android:text="Learn about Common Views in Android"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_api_response_eg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="35dp"
+            android:background="@color/blue"
+            android:padding="25dp"
+            android:text="API Response Example"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textStyle="bold" />
